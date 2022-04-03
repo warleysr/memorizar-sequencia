@@ -1,11 +1,11 @@
-// ENTRADAS DIGITAIS DOS LEDS
+// PINOS DIGITAIS DO ARDUINO LIGADOS AOS LEDS E BUZZER
 #define CIMA 2
 #define BAIXO 4
 #define DIREITA 5
 #define ESQUERDA 3
 #define BUZZER 6
 
-// ENTRADAS ANALOGICAS DO JOYSTICK
+// ENTRADAS ANALOGICAS DO ARDUINO LIGADAS AO JOYSTICK
 #define EIXO_X A0
 #define EIXO_Y A1
 
@@ -41,9 +41,7 @@ void checkWin() {
     }
     else {
       for (int i = 0; i < 5; i++) {
-        tone(BUZZER, 800);
-        delay(150);
-        noTone(BUZZER);
+        intTone(800);
         delay(150);
       }
       lose(true);
